@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alongkorn Ngenthong | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #f1f5f9;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero-content h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <h1>Alongkorn Ngenthong</h1>
+            <p>Logistics & Supply Chain Student | AI Enthusiast</p>
+            <a href="#about" class="btn">Explore My Work</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            ยินดีที่ได้รู้จักครับ ผมเป็นนักศึกษาคณะโลจิสติกส์และการคมนาคมขนส่ง 
+            ที่มีความสนใจในการนำเทคโนโลยี AI และ Machine Learning 
+            มาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพในระบบการทำงานจริง
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-truck-loading"></i>
+                <h3>Logistics</h3>
+                <p>เชี่ยวชาญด้าน Incoterms 2020 และการจัดการคลังสินค้าแบบมืออาชีพ</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-robot"></i>
+                <h3>AI & Prompting</h3>
+                <p>การเขียน Prompt Engineering เพื่อลดระยะเวลาในการทำงานในระบบ Daily Systems</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Analysis</h3>
+                <p>การใช้ Excel ขั้นสูงเพื่อทำ Dashboard และวิเคราะห์ข้อมูลการขนส่ง</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>หากคุณสนใจร่วมงานหรือแลกเปลี่ยนความรู้ สามารถติดต่อผมได้ผ่านช่องทางโซเชียลมีเดีย</p>
+        <div style="font-size: 1.5rem;">
+            <a href="#" style="margin-right: 15px; color: #333;"><i class="fab fa-github"></i></a>
+            <a href="#" style="margin-right: 15px; color: #0077b5;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color: #ea4335;"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Alongkorn Ngenthong. Built with Passion.</p>
+    </footer>
+
+</body>
+</html>
