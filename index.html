@@ -36,8 +36,8 @@
             justify-content: center;
             color: white;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000'); /* รูปคลังสินค้า/โลจิสติกส์ */
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -47,6 +47,16 @@
             font-size: 3.5rem;
             margin: 0;
             font-weight: 700;
+        }
+
+        .student-id {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 20px;
+            border-radius: 50px;
+            letter-spacing: 1px;
         }
 
         .hero-content p {
@@ -115,7 +125,7 @@
 
         /* Final Quote Section */
         .quote-section {
-            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), 
+            background: linear-gradient(rgba(30, 58, 138, 0.92), rgba(30, 58, 138, 0.92)), 
                         url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             padding: 120px 20px;
@@ -147,18 +157,19 @@
 </head>
 <body>
 
-    <!-- หน้า 1: Hero -->
+    <!-- หน้า 1: Hero พร้อมข้อมูลรหัสนักศึกษา -->
     <header class="hero">
         <div class="hero-content">
             <h1>นาย อลงกรณ์ เงินทอง</h1>
+            <div class="student-id">รหัสนักศึกษา 6650101281</div>
             <p>นักศึกษาวิชาโลจิสติกส์และการคมนาคมขนส่ง</p>
             <div style="margin-top: 30px;">
-                <a href="#about" style="color: white; text-decoration: none; border: 2px solid white; padding: 12px 25px; border-radius: 50px;">ทำความรู้จักเพิ่มเติม</a>
+                <a href="#about" style="color: white; text-decoration: none; border: 2px solid white; padding: 12px 25px; border-radius: 50px; transition: 0.3s;">ทำความรู้จักเพิ่มเติม</a>
             </div>
         </div>
     </header>
 
-    <!-- หน้า 2: About -->
+    <!-- หน้า 2: About พร้อมรูปภาพ -->
     <section id="about">
         <div class="section-flex">
             <div class="section-text">
@@ -171,7 +182,7 @@
         </div>
     </section>
 
-    <!-- หน้า 3: Expertise -->
+    <!-- หน้า 3: Expertise พร้อมรูปภาพ -->
     <section style="background-color: #fafafa;">
         <div class="section-flex" style="flex-direction: row-reverse;">
             <div class="section-text">
@@ -180,12 +191,12 @@
                     <div class="skill-card">
                         <i class="fas fa-ship fa-2x" style="color:var(--accent)"></i>
                         <h3>Global Trade</h3>
-                        <p>ความเข้าใจใน Incoterms 2020 และพิธีการศุลกากร</p>
+                        <p>ความเข้าใจใน Incoterms 2020 และการจัดการคลังสินค้า</p>
                     </div>
                     <div class="skill-card">
                         <i class="fas fa-microchip fa-2x" style="color:var(--accent)"></i>
                         <h3>AI Integration</h3>
-                        <p>ประยุกต์ใช้ AI เพื่อวิเคราะห์และลดเวลาในการทำงาน</p>
+                        <p>การใช้ Prompt Engineering เพื่อเพิ่มประสิทธิภาพในการทำงานรายวัน</p>
                     </div>
                 </div>
             </div>
@@ -195,7 +206,7 @@
         </div>
     </section>
 
-    <!-- หน้า 4: Final Message -->
+    <!-- หน้า 4: ประโยคปิดท้ายพร้อมรูปภาพพื้นหลัง -->
     <div class="quote-section">
         <div class="quote-text">
             " มุ่งมั่นเรียนรู้ พัฒนาโลกโลจิสติกส์ ด้วยเทคโนโลยีและความคิดสร้างสรรค์ "
