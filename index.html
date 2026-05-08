@@ -3,160 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alongkorn Ngenthong | Portfolio</title>
+    <title>Alongkorn Ngenthong | Logistics Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Base Styles */
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #64748b;
-            --bg-color: #f8fafc;
-            --text-color: #1e293b;
+            --primary: #1e3a8a; /* Navy Blue */
+            --accent: #3b82f6;  /* Royal Blue */
+            --text: #1f2937;
+            --light: #f3f4f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: 'Inter', 'Kanit', sans-serif;
+            color: var(--text);
+            background-color: #fff;
         }
 
-        header {
+        /* Hero Section */
+        .hero {
+            position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
-            padding: 0 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000'); /* รูปคลังสินค้า/โลจิสติกส์ */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 700;
         }
 
         .hero-content p {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            margin: 20px 0;
+            opacity: 0.9;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Section Styles */
+        /* Content Sections */
         section {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 20px;
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .section-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        .section-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h2 {
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
         }
 
-        .grid {
+        /* Skills Grid */
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        .skill-card {
+            padding: 30px;
+            background: var(--light);
+            border-radius: 15px;
+            border-bottom: 4px solid var(--primary);
+            transition: 0.3s;
         }
 
-        .card i {
+        .skill-card:hover { transform: translateY(-10px); }
+
+        /* Final Quote Section */
+        .quote-section {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            padding: 120px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .quote-text {
             font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
+            font-weight: 300;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         footer {
-            text-align: center;
             padding: 40px;
-            background: #f1f5f9;
-            font-size: 0.9rem;
+            text-align: center;
+            background: #111;
+            color: #666;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .hero-content h1 { font-size: 2.2rem; }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .section-flex { flex-direction: column; text-align: center; }
+            .section-image { height: 300px; width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- หน้า 1: Hero -->
+    <header class="hero">
         <div class="hero-content">
-            <h1>Alongkorn Ngenthong</h1>
-            <p>Logistics & Supply Chain Student | AI Enthusiast</p>
-            <a href="#about" class="btn">Explore My Work</a>
+            <h1>นาย อลงกรณ์ เงินทอง</h1>
+            <p>นักศึกษาวิชาโลจิสติกส์และการคมนาคมขนส่ง</p>
+            <div style="margin-top: 30px;">
+                <a href="#about" style="color: white; text-decoration: none; border: 2px solid white; padding: 12px 25px; border-radius: 50px;">ทำความรู้จักเพิ่มเติม</a>
+            </div>
         </div>
     </header>
 
+    <!-- หน้า 2: About -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            ยินดีที่ได้รู้จักครับ ผมเป็นนักศึกษาคณะโลจิสติกส์และการคมนาคมขนส่ง 
-            ที่มีความสนใจในการนำเทคโนโลยี AI และ Machine Learning 
-            มาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพในระบบการทำงานจริง
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>Expertise</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-truck-loading"></i>
-                <h3>Logistics</h3>
-                <p>เชี่ยวชาญด้าน Incoterms 2020 และการจัดการคลังสินค้าแบบมืออาชีพ</p>
+        <div class="section-flex">
+            <div class="section-text">
+                <h2>ข้อมูลส่วนตัว</h2>
+                <p>ผมมีความมุ่งมั่นที่จะพัฒนาทักษะในสายงานด้านการจัดการโซ่อุปทาน โดยเน้นความคล่องตัวและประสิทธิภาพเป็นหลัก พร้อมเปิดรับการเรียนรู้เทคโนโลยีใหม่ๆ เพื่อนำมาแก้ปัญหาในโลกของการขนส่งยุคดิจิทัล</p>
             </div>
-            <div class="card">
-                <i class="fas fa-robot"></i>
-                <h3>AI & Prompting</h3>
-                <p>การเขียน Prompt Engineering เพื่อลดระยะเวลาในการทำงานในระบบ Daily Systems</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Data Analysis</h3>
-                <p>การใช้ Excel ขั้นสูงเพื่อทำ Dashboard และวิเคราะห์ข้อมูลการขนส่ง</p>
+            <div class="section-image">
+                <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad55?auto=format&fit=crop&q=80&w=800" alt="Logistics Education">
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>หากคุณสนใจร่วมงานหรือแลกเปลี่ยนความรู้ สามารถติดต่อผมได้ผ่านช่องทางโซเชียลมีเดีย</p>
-        <div style="font-size: 1.5rem;">
-            <a href="#" style="margin-right: 15px; color: #333;"><i class="fab fa-github"></i></a>
-            <a href="#" style="margin-right: 15px; color: #0077b5;"><i class="fab fa-linkedin"></i></a>
-            <a href="#" style="color: #ea4335;"><i class="fas fa-envelope"></i></a>
+    <!-- หน้า 3: Expertise -->
+    <section style="background-color: #fafafa;">
+        <div class="section-flex" style="flex-direction: row-reverse;">
+            <div class="section-text">
+                <h2>ความเชี่ยวชาญ</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-ship fa-2x" style="color:var(--accent)"></i>
+                        <h3>Global Trade</h3>
+                        <p>ความเข้าใจใน Incoterms 2020 และพิธีการศุลกากร</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-microchip fa-2x" style="color:var(--accent)"></i>
+                        <h3>AI Integration</h3>
+                        <p>ประยุกต์ใช้ AI เพื่อวิเคราะห์และลดเวลาในการทำงาน</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-image">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" alt="Professional Skills">
+            </div>
         </div>
     </section>
+
+    <!-- หน้า 4: Final Message -->
+    <div class="quote-section">
+        <div class="quote-text">
+            " มุ่งมั่นเรียนรู้ พัฒนาโลกโลจิสติกส์ ด้วยเทคโนโลยีและความคิดสร้างสรรค์ "
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Alongkorn Ngenthong. Built with Passion.</p>
+        <p>&copy; 2026 Alongkorn Ngenthong. All Rights Reserved.</p>
     </footer>
 
 </body>
